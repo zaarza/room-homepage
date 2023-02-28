@@ -1,0 +1,14 @@
+@import "abstracts/colors", "abstracts/mixins", "abstracts/variables";
+
+@import "base/reset";
+
+:root {
+  --background: $white;
+  --text: $black;
+  --elements: $darkGray;
+  --elements-2: $veryDarkGray;
+}
+
+body {
+  font-family: $font-1;
+}
