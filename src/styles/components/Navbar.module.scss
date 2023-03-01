@@ -5,6 +5,7 @@
   margin-inline: auto;
   z-index: 1;
   width: 100%;
+  max-width: variables.$large;
 
   &__inner {
     padding: 18px 13px;

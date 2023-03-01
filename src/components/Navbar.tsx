@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-html-link-for-pages */
 import React, { useState } from "react";
 import styles from "@/styles/components/Navbar.module.scss";
 import Image from "next/image";
@@ -14,7 +15,9 @@ export default function Navbar() {
         </button>
 
         <div className={styles.navbar__logo}>
-          <Image src="/assets/images/logo.svg" alt="Open menu" fill={true} />
+          <Link href="/">
+            <Image src="/assets/images/logo.svg" alt="Open menu" fill={true} />
+          </Link>
         </div>
 
         <div className={`${styles.navbar__responsiveLinks} ${isNavbarLinksActive && styles["navbar__responsiveLinks--active"]}`}>
@@ -24,24 +27,24 @@ export default function Navbar() {
 
           <ul className={styles.navbar__links}>
             <li className={styles.navbar__link}>
-              <Link className={styles.navbar__A} href="/">
+              <a className={styles.navbar__A} href="#">
                 home
-              </Link>
+              </a>
             </li>
             <li className={styles.navbar__link}>
-              <Link className={styles.navbar__A} href="/">
+              <a className={styles.navbar__A} href="#">
                 shop
-              </Link>
+              </a>
             </li>
             <li className={styles.navbar__link}>
-              <Link className={styles.navbar__A} href="/">
+              <a className={styles.navbar__A} href="#about">
                 about
-              </Link>
+              </a>
             </li>
             <li className={styles.navbar__link}>
-              <Link className={styles.navbar__A} href="/">
+              <a className={styles.navbar__A} href="#">
                 contact
-              </Link>
+              </a>
             </li>
           </ul>
         </div>

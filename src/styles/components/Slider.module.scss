@@ -21,7 +21,7 @@
     align-items: center;
 
     &:hover {
-      background-color: adjust-color($color: black, $lightness: 10);
+      background-color: adjust-color($color: black, $lightness: 20);
     }
   }
 }

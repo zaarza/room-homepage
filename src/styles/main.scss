@@ -9,7 +9,13 @@
   --elements-2: #{$veryDarkGray};
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: #{$font-1};
   font-size: #{$fontSize-1};
+  max-width: #{$large};
+  margin-inline: auto;
 }

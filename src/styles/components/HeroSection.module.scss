@@ -18,6 +18,7 @@
     padding: 60px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     row-gap: 1rem;
   }
 
@@ -73,6 +74,15 @@
 
     &__information {
       padding-block: 60px;
+      row-gap: 0px;
+    }
+
+    &__text {
+      min-height: 260px;
+    }
+
+    &__header {
+      line-height: 3rem;
     }
   }
 }

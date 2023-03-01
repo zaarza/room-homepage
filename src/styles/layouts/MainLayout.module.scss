@@ -1,0 +1,6 @@
+@use "/src/styles/abstracts/variables";
+
+.main {
+  margin-inline: auto;
+  max-width: variables.$large;
+}

@@ -1,0 +1,55 @@
+@use "/src/styles/abstracts/variables";
+
+.about {
+  display: flex;
+  flex-direction: column;
+
+  &__dark,
+  &__light {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 30/19;
+
+    img {
+      object-fit: cover;
+      object-position: left;
+    }
+  }
+
+  &__information {
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 1rem;
+  }
+
+  &__header {
+    letter-spacing: 0.5rem;
+    font-size: 1rem;
+    font-weight: variables.$fontWeight-2;
+    line-height: 1.5rem;
+  }
+
+  &__paragraph {
+    line-height: 1.8rem;
+    color: var(--elements);
+    font-weight: variables.$fontWeight-2;
+  }
+}
+
+@media screen and (min-width: variables.$medium) {
+  .about {
+    flex-direction: row;
+
+    &__dark,
+    &__light {
+      position: relative;
+      aspect-ratio: 30/19;
+    }
+
+    &__information {
+      max-width: 40%;
+    }
+  }
+}

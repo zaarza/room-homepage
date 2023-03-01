@@ -1,15 +1,17 @@
 import React, { ReactElement } from "react";
-import { Navbar } from "@/components";
+import { Navbar, Footer } from "@/components";
+import styles from "@/styles/layouts/MainLayout.module.scss";
 
 interface MainLayout {
-  children: ReactElement;
+  children: ReactElement[];
 }
 
 export default function MainLayout({ children }: MainLayout) {
   return (
     <>
       <Navbar />
-      <main>{children}</main>
+      <main className={styles.main}>{children}</main>
+      <Footer />
     </>
   );
 }

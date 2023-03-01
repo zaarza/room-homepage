@@ -1,6 +1,6 @@
 import Head from "next/head";
 import MainLayout from "@/layouts/MainLayout";
-import { HeroSection } from "@/components";
+import { AboutSection, HeroSection } from "@/components";
 
 export default function Home() {
   return (
@@ -13,6 +13,7 @@ export default function Home() {
       </Head>
       <MainLayout>
         <HeroSection />
+        <AboutSection />
       </MainLayout>
     </>
   );

@@ -6,7 +6,7 @@ interface Slider {
   adjustImageState: Function;
 }
 
-const Slider = ({ adjustImageState }: Slider) => {
+export default function Slider({ adjustImageState }: Slider) {
   return (
     <div className={styles.slider}>
       <button className={styles.slider__previous} type="button" onClick={() => adjustImageState("decrease")}>
@@ -17,6 +17,4 @@ const Slider = ({ adjustImageState }: Slider) => {
       </button>
     </div>
   );
-};
-
-export default Slider;
+}
