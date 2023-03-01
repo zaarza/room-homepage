@@ -62,14 +62,17 @@
   }
 }
 
-@media screen and (min-width: variables.$large) {
+@media screen and (min-width: variables.$medium) {
   .hero {
     flex-direction: row;
-    align-items: center;
 
     &__image {
       min-width: 55%;
       aspect-ratio: 140/89;
+    }
+
+    &__information {
+      padding-block: 60px;
     }
   }
 }
