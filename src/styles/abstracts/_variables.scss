@@ -1,5 +1,6 @@
 // Typography
-$fontSize-1: 12px;
+$fontSize-1: clamp(0.75rem, 0.662rem + 0.3756vw, 1rem);
+$fontSize-3: clamp(2rem, 0.4718rem + 2.2535vw, 3rem);
 $font-1: "League Spartan", sans-serif;
 $fontWeight-1: 500;
 $fontWeight-2: 600;
@@ -7,5 +8,5 @@ $fontWeight-3: 700;
 
 // Breakpoints
 $small: 375px;
-$medium: 768px;
+$medium: 1000px;
 $large: 1440px;

@@ -1,0 +1,130 @@
+@use "/src/styles/abstracts/variables";
+
+.navbar {
+  position: fixed;
+  margin-inline: auto;
+  z-index: 1;
+  width: 100%;
+
+  &__inner {
+    padding: 18px 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  &__open {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    width: 44px;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: auto;
+  }
+
+  &__logo {
+    position: absolute;
+    width: 54px;
+    aspect-ratio: 31/7;
+  }
+
+  &__responsiveLinks {
+    padding-block: 18px;
+    padding-left: 900px;
+    padding-right: 24px;
+    position: absolute;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.3s, padding 0.6s;
+
+    &--active {
+      background-color: white;
+      padding-left: 24px;
+      left: 0;
+    }
+  }
+
+  &__close {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    width: 44px;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  &__links {
+    display: flex;
+    column-gap: 24px;
+  }
+
+  &__link {
+    font-size: variables.$fontSize-1;
+    font-weight: variables.$fontWeight-2;
+  }
+
+  &__A {
+    text-decoration: none;
+    color: var(--text);
+  }
+}
+
+@media screen and (min-width: variables.$medium) {
+  .navbar {
+    &__inner {
+      padding: 48px 64px;
+      justify-content: flex-start;
+      column-gap: 4rem;
+    }
+
+    &__open {
+      display: none;
+    }
+
+    &__logo {
+      position: relative;
+    }
+
+    &__responsiveLinks {
+      background-color: transparent;
+      width: fit-content;
+      position: inherit;
+      padding: 0;
+    }
+
+    &__close {
+      display: none;
+    }
+
+    &__link {
+      position: relative;
+      display: flex;
+      justify-content: center;
+
+      &:hover {
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: -0.8rem;
+          width: 1.5rem;
+          height: 2px;
+          background-color: var(--background);
+        }
+      }
+    }
+
+    &__A {
+      color: var(--background);
+    }
+  }
+}

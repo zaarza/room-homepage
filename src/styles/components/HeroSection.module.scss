@@ -1,0 +1,75 @@
+@use "/src/styles/abstracts/variables";
+.hero {
+  display: flex;
+  flex-direction: column;
+
+  &__image {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1;
+
+    img {
+      object-fit: cover;
+      object-position: left;
+    }
+  }
+
+  &__information {
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+
+  &__header {
+    font-weight: variables.$fontWeight-3;
+    font-size: variables.$fontSize-3;
+    line-height: 2.5rem;
+  }
+
+  &__paragraph {
+    line-height: 1.8rem;
+    color: var(--elements);
+    font-weight: variables.$fontWeight-2;
+  }
+
+  &__cta {
+    display: flex;
+    column-gap: 2rem;
+    align-items: center;
+    text-decoration: none;
+    height: 44px;
+    color: var(--elements);
+    font-weight: variables.$fontWeight-2;
+    letter-spacing: 1rem;
+    line-height: 1.5rem;
+
+    &:hover {
+      filter: contrast(5%);
+    }
+  }
+
+  &__arrow {
+    position: relative;
+    width: 44px;
+    aspect-ratio: 10/3;
+  }
+}
+
+@media screen and (min-width: variables.$large) {
+  .hero {
+    flex-direction: row;
+    align-items: center;
+
+    &__image {
+      min-width: 55%;
+      aspect-ratio: 140/89;
+    }
+  }
+}

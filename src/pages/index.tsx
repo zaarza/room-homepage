@@ -1,4 +1,6 @@
 import Head from "next/head";
+import MainLayout from "@/layouts/MainLayout";
+import { HeroSection } from "@/components";
 
 export default function Home() {
   return (
@@ -9,9 +11,9 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/assets/images/favicon-32x32.png" />
       </Head>
-      <main>
-        <h1>Hello world!</h1>
-      </main>
+      <MainLayout>
+        <HeroSection />
+      </MainLayout>
     </>
   );
 }
